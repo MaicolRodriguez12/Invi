@@ -63,7 +63,7 @@ button {
     position: fixed; /* O absolute */
     bottom: 20px;    /* Para que no esté pegado al borde */
     left: -200px;    /* Posición inicial */
-    width: 350px;    /* Dale un tamaño fijo para probar */
+    width: 300px;    /* Dale un tamaño fijo para probar */
     z-index: 10;     /* Asegúrate de que esté por encima del fondo */
     mix-blend-mode: multiply; /* Para quitar el fondo blanco que vimos en tu captura */
 }
