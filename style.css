@@ -1,0 +1,100 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe4e1;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    overflow: hidden; /* Evita que salgan barras de scroll si el botón se mueve fuera */
+}
+
+.container {
+    text-align: center;
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 400px;
+}
+
+h1 {
+    color: #d63384;
+    margin-bottom: 50px;
+}
+
+/* 1. Creamos un contenedor específico para los botones */
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    height: 100px; /* Espacio para que no se mueva el diseño al salir el botón */
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#btnSi {
+    background-color: #4caf50;
+    color: white;
+}
+
+#btnNo {
+    background-color: #3698f4;
+    color: white;
+    position: relative; /* Empieza aquí para estar centrado */
+    transition: 0.3s ease; /* Movimiento suave */
+    z-index: 999;
+}
+
+/* ... (tu CSS existente para body, container, h1, buttons, etc.) ... */
+
+#runningCat {
+    position: fixed; /* 'fixed' es mejor para que siempre esté abajo aunque haya scroll */
+    width: 300px;
+    height: auto;
+    bottom: 20px;    /* 20px de separación del borde inferior */
+    left: -150px;    /* Empieza fuera de la pantalla a la izquierda */
+    z-index: 5;
+    transition: none; /* Quitamos la transición suave para que el JS lo mueva fluido */
+}
+
+/* Clase para ocultar el gato */
+.hidden {
+    display: none !important; /* Oculta el gato al principio */
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Opcional: una pequeña animación para que los botones aparezcan suavemente */
+.fade-in {
+    animation: aparecer 1s forwards;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#typewriter::after {
+    content: "|";
+    animation: parpadeo 0.7s infinite;
+}
+
+@keyframes parpadeo {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
