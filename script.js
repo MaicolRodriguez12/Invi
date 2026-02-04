@@ -97,7 +97,8 @@ btnSi.addEventListener('click', () => {
 function animateCat() {
     runningCat.classList.remove('hidden');
     
-    let currentPosition = -runningCat.offsetWidth;
+// En lugar de: let currentPosition = -runningCat.offsetWidth;
+    let currentPosition = -200; // Un valor fijo para asegurar que empiece fuera de pantalla
     let speed = 4;
 
     function move() {

@@ -60,13 +60,12 @@ button {
 /* ... (tu CSS existente para body, container, h1, buttons, etc.) ... */
 
 #runningCat {
-    position: fixed; /* 'fixed' es mejor para que siempre esté abajo aunque haya scroll */
-    width: 300px;
-    height: auto;
-    bottom: 20px;    /* 20px de separación del borde inferior */
-    left: -150px;    /* Empieza fuera de la pantalla a la izquierda */
-    z-index: 5;
-    transition: none; /* Quitamos la transición suave para que el JS lo mueva fluido */
+    position: fixed; /* O absolute */
+    bottom: 20px;    /* Para que no esté pegado al borde */
+    left: -200px;    /* Posición inicial */
+    width: 350px;    /* Dale un tamaño fijo para probar */
+    z-index: 10;     /* Asegúrate de que esté por encima del fondo */
+    mix-blend-mode: multiply; /* Para quitar el fondo blanco que vimos en tu captura */
 }
 
 /* Clase para ocultar el gato */
